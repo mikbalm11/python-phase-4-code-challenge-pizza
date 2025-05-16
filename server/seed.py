@@ -38,4 +38,8 @@ with app.app_context():
     db.session.add_all(restaurantPizzas)
     db.session.commit()
 
+    print(f"Restaurants count: {Restaurant.query.count()}")
+    print(f"Pizzas count: {Pizza.query.count()}")
+    print(f"RestaurantPizzas count: {RestaurantPizza.query.count()}")
+
     print("Seeding done!")
